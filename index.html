@@ -4,43 +4,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GKJW Pesanggaran</title>
   <style>
-    body {
+    .body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.6;
       background: #f5f5f5;
     }
-    header {
+    .header {
       background: #2c6e49;
       color: white;
       padding: 20px;
       text-align: center;
     }
-    nav {
+    .nav {
       background: #1f4f38;
       display: flex;
       justify-content: center;
       gap: 20px;
       padding: 10px 0;
     }
-    nav a {
+    .nav .a {
       color: white;
       text-decoration: none;
       font-weight: bold;
     }
-    nav a:hover {
+    .nav .a:hover {
       text-decoration: underline;
     }
-    section {
+    .section {
       padding: 40px 20px;
       background: white;
       margin: 20px;
       border-radius: 8px;
     }
-    h2 {
+    .h2 {
       color: #2c6e49;
     }
-    footer {
+    .footer {
       background: #2c6e49;
       color: white;
       text-align: center;
@@ -48,7 +48,7 @@
       margin-top: 20px;
     }
     @media (max-width: 600px) {
-      nav {
+      .nav {
         flex-direction: column;
         gap: 10px;
       }
@@ -86,7 +86,7 @@
       gap: 15px;
       margin-top: 20px;
     }
-    .galeri-grid img {
+    .galeri-grid .img {
       width: 100%;
       border-radius: 10px;
       object-fit: cover;
@@ -141,7 +141,8 @@
     }
   </style>
 </head>
-<body><header class="header">
+<body>
+  <header class="header">
   <div class="header-inner">
     <img src="img/logo-gkjw.png" alt="Logo GKJW" class="logo">
     <div class="judul">
@@ -149,7 +150,8 @@
       <p>Gereja Kristen Jawi Wetan</p>
     </div>
   </div>
-</header><nav>
+</header>
+<nav>
   <a href="#tentang">Tentang</a>
   <a href="#ibadah">Jadwal Ibadah</a>
   <a href="#kegiatan">Kegiatan</a>
@@ -238,7 +240,9 @@
   <h2>Ibadah Online</h2>
   <p>Ibadah GKJW Pesanggaran dapat diikuti secara online melalui YouTube.</p>
   <div class="youtube-wrapper">
-    <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Ibadah GKJW Pesanggaran" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Ibadah GKJW Pesanggaran" frameborder="0" allowfullscreen>
+    </iframe>
   </div>
-</section></body>
+</section>
+</body>
 </html>
