@@ -80,11 +80,75 @@
         grid-template-columns: 1fr;
       }
     }
+    .galeri-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .galeri-grid img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    }
+    .youtube-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      margin-top: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    .youtube-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .header {
+      background: linear-gradient(135deg, #2c6e49, #1f4f38);
+      color: #fff;
+      padding: 25px 15px;
+    }
+    .header-inner {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .logo {
+      width: 70px;
+      height: auto;
+    }
+    .judul h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    .judul p {
+      margin: 5px 0 0;
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+    @media (max-width: 600px) {
+      .header-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
   </style>
 </head>
-<body><header>
-  <h1>GKJW Pesanggaran</h1>
-  <p>Gereja Kristen Jawi Wetan</p>
+<body><header class="header">
+  <div class="header-inner">
+    <img src="img/logo-gkjw.png" alt="Logo GKJW" class="logo">
+    <div class="judul">
+      <h1>GKJW Pesanggaran</h1>
+      <p>Gereja Kristen Jawi Wetan</p>
+    </div>
+  </div>
 </header><nav>
   <a href="#tentang">Tentang</a>
   <a href="#ibadah">Jadwal Ibadah</a>
@@ -139,21 +203,42 @@
   <p>© 2025 GKJW Pesanggaran | Berani Menjadi Manusia</p>
 </footer><!-- WARTA JEMAAT --><section id="warta">
   <h2>Warta Jemaat Mingguan</h2>
+  <p><strong>Minggu:</strong> ____________________</p>
   <ul>
-    <li>Ibadah Minggu – 07.00 WIB</li>
-    <li>Pelayanan Pemuda – Sabtu 18.00 WIB</li>
-    <li>Doa Bersama – Rabu 18.30 WIB</li>
+    <li><strong>Ibadah Minggu</strong><br>Pukul 07.00 WIB – Gedung Gereja</li>
+    <li><strong>Ibadah Pemuda & Remaja</strong><br>Sabtu, pukul 18.00 WIB</li>
+    <li><strong>Ibadah Keluarga</strong><br>Sesuai jadwal wilayah</li>
+    <li><strong>Doa Bersama</strong><br>Rabu, pukul 18.30 WIB</li>
   </ul>
 </section><!-- BERITA & PENGUMUMAN --><section id="berita">
   <h2>Berita & Pengumuman</h2>
-  <p>Pemberitahuan kegiatan gereja dan informasi penting jemaat akan ditampilkan di sini.</p>
-</section><!-- GALERI --><section id="galeri">
+  <article class="card">
+    <h3>Pengumuman Jemaat</h3>
+    <p><strong>Tanggal:</strong> ____________________</p>
+    <p>
+      Diberitahukan kepada seluruh warga jemaat GKJW Pesanggaran bahwa
+      informasi kegiatan, pelayanan, dan pengumuman penting akan disampaikan
+      melalui halaman ini.
+    </p>
+    <p>
+      Mohon perhatian dan partisipasi jemaat dalam setiap kegiatan pelayanan
+      yang telah dijadwalkan.
+    </p>
+  </article>
+</section><section id="galeri">
   <h2>Galeri Kegiatan</h2>
-  <p>Dokumentasi foto kegiatan jemaat GKJW Pesanggaran.</p>
-  <img src="https://via.placeholder.com/300" alt="Kegiatan 1" />
-  <img src="https://via.placeholder.com/300" alt="Kegiatan 2" />
+  <p>Dokumentasi kegiatan jemaat GKJW Pesanggaran.</p>
+  <div class="galeri-grid">
+    <img src="https://via.placeholder.com/300x200" alt="Kegiatan Jemaat 1">
+    <img src="https://via.placeholder.com/300x200" alt="Kegiatan Jemaat 2">
+    <img src="https://via.placeholder.com/300x200" alt="Kegiatan Jemaat 3">
+    <img src="https://via.placeholder.com/300x200" alt="Kegiatan Jemaat 4">
+  </div>
 </section><!-- YOUTUBE --><section id="youtube">
   <h2>Ibadah Online</h2>
-  <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+  <p>Ibadah GKJW Pesanggaran dapat diikuti secara online melalui YouTube.</p>
+  <div class="youtube-wrapper">
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Ibadah GKJW Pesanggaran" frameborder="0" allowfullscreen></iframe>
+  </div>
 </section></body>
 </html>
