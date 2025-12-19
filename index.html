@@ -29,7 +29,7 @@
       font-weight: bold;
     }
     nav a:hover {
-      text-decoration: none;
+      text-decoration: underline;
     }
     section {
       padding: 40px 20px;
@@ -37,7 +37,7 @@
       margin: 20px;
       border-radius: 8px;
     }
-    .h2 {
+    h2 {
       color: #2c6e49;
     }
     footer {
@@ -48,7 +48,7 @@
       margin-top: 20px;
     }
     @media (max-width: 600px) {
-      .nav {
+      nav {
         flex-direction: column;
         gap: 10px;
       }
@@ -76,75 +76,31 @@
       margin-bottom: 10px;
     }
     @media (max-width: 768px) {
-      .visi-misi {
-        grid-template-columns: 1fr;
-      }
-    }
-    .galeri-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 15px;
-      margin-top: 20px;
-    }
-    .galeri-grid .img {
-      width: 100%;
-      border-radius: 10px;
-      object-fit: cover;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
-    }
-    .youtube-wrapper {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      margin-top: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    }
-    .youtube-wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-    .header {
-      background: linear-gradient(135deg, #2c6e49, #1f4f38);
-      color: #fff;
-      padding: 25px 15px;
-    }
-    .header-inner {
-      max-width: 1100px;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-    logo {
-      width: 70px;
-      height: auto;
-    }
-    .judul h1 {
-      margin: 0;
-      font-size: 1.8rem;
-    }
-    .judul p {
-      margin: 5px 0 0;
-      font-size: 0.95rem;
-      opacity: 0.9;
-    }
-    @media (max-width: 600px) {
-      .header-inner {
-        flex-direction: column;
-        text-align: center;
-      }
-    }
-  </style>
+  body {
+    font-size: 15px;
+  }header { padding: 12px 16px; }
+
+.header-inner { flex-direction: column; align-items: center; text-align: center; }
+
+.logo { width: 90px; margin-bottom: 8px; }
+
+nav ul { flex-direction: column; gap: 10px; margin-top: 10px; }
+
+.visi-misi { padding: 20px 15px; }
+
+.visi-misi h2 { font-size: 20px; }
+
+.visi-misi p, .visi-misi li { font-size: 14px; line-height: 1.6; }
+
+.galeri-grid { grid-template-columns: 1fr; gap: 15px; }
+
+.galeri-grid img { max-height: 200px; } } } .galeri-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-top: 20px; } .galeri-grid img { width: 100%; max-height: 180px; object-fit: cover; border-radius: 10px; box-shadow: 0 3px 8px rgba(0,0,0,0.15); } .youtube-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-top: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); } .youtube-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; } .header { background: linear-gradient(135deg, #2c6e49, #1f4f38); color: #fff; padding: 25px 15px; } .header-inner { max-width: 1100px; margin: auto; display: flex; align-items: center; gap: 20px; } .logo { width: 70px; height: auto; } .judul h1 { margin: 0; font-size: 1.8rem; } .judul p { margin: 5px 0 0; font-size: 0.95rem; opacity: 0.9; } @media (max-width: 600px) { .header-inner { flex-direction: column; text-align: center; } } </style>
+
 </head>
 <body>
   <header class="header">
   <div class="header-inner">
-    <img src="img/logo-gkjw.jpg" alt="Logo gkjw" class="logo">
+    <img src="img/logo-gkjw.png" alt="Logo GKJW" class="logo">
     <div class="judul">
       <h1>GKJW Pesanggaran</h1>
       <p>Gereja Kristen Jawi Wetan</p>
@@ -153,7 +109,7 @@
 </header>
 <nav>
   <a href="#tentang">Tentang</a>
-  <a href="#ibadah">Jadwal</a>
+  <a href="#ibadah">Jadwal Ibadah</a>
   <a href="#kegiatan">Kegiatan</a>
   <a href="#kontak">Kontak</a>
 </nav>
@@ -163,16 +119,14 @@
     Gereja Kristen Jawi Wetan (GKJW) Pesanggaran adalah persekutuan umat percaya
     yang hidup dalam kasih Kristus dan melayani Tuhan serta sesama di tengah
     masyarakat.
-  </p>  
-  <div class="visi-misi">
+  </p>  <div class="visi-misi">
     <div class="card">
       <h3>Visi</h3>
       <p>
         Menjadi persekutuan umat Allah yang hidup dalam kasih Kristus, bertumbuh
         dalam iman, dan setia melayani Tuhan serta sesama.
       </p>
-    </div>
-    <div class="card">
+    </div><div class="card">
   <h3>Misi</h3>
   <ul>
     <li>Menyelenggarakan ibadah yang membangun iman dan persekutuan.</li>
@@ -182,7 +136,8 @@
     <li>Mendorong partisipasi aktif jemaat dalam pelayanan.</li>
   </ul>
 </div>
-</div>
+
+  </div>
 </section>
 <section id="ibadah">
   <h2>Jadwal Ibadah</h2>
@@ -202,39 +157,27 @@
 <section id="kontak">
   <h2>Kontak</h2>
   <p>
-    GKJW Jemaat Pesanggaran<br/>
-📍Jl. Suprapto No 26 Pesanggaran - Banyuwangi<br/>
-📧 pesanggarankppm@gmail.com<br/>
-📞 +62 823-3068-2038
+    Alamat: Pesanggaran, Banyuwangi<br />
+    Email: gkjwpesanggaran@email.com<br />
+    Telepon: 08xxxxxxxxxx
   </p>
-  </section>
-<!-- WARTA JEMAAT -->
-<section id="warta">
-  <h2>Warta Jemaat Mingguan</h2>
-  <p>
-    <strong>Minggu:</strong> ____________________</p>
-  <ul>
-    <li>
-      <strong>Ibadah Minggu</strong>
-    <br>Pukul 07.00 WIB – Gedung Gereja</li>
-    <li>
-      <strong>Ibadah Pemuda & Remaja</strong>
-    <br>Sabtu, pukul 18.00 WIB</li>
-    <li>
-      <strong>Ibadah Keluarga</strong>
-    <br>Sesuai jadwal wilayah</li>
-    <li>
-      <strong>Doa Bersama</strong>
-      <br>Rabu, pukul 18.30 WIB</li>
-  </ul>
 </section>
-<!-- BERITA & PENGUMUMAN -->
-<section id="berita">
+<footer>
+  <p>© 2025 GKJW Pesanggaran | Berani Menjadi Manusia</p>
+</footer><!-- WARTA JEMAAT --><section id="warta">
+  <h2>Warta Jemaat Mingguan</h2>
+  <p><strong>Minggu:</strong> ____________________</p>
+  <ul>
+    <li><strong>Ibadah Minggu</strong><br>Pukul 07.00 WIB – Gedung Gereja</li>
+    <li><strong>Ibadah Pemuda & Remaja</strong><br>Sabtu, pukul 18.00 WIB</li>
+    <li><strong>Ibadah Keluarga</strong><br>Sesuai jadwal wilayah</li>
+    <li><strong>Doa Bersama</strong><br>Rabu, pukul 18.30 WIB</li>
+  </ul>
+</section><!-- BERITA & PENGUMUMAN --><section id="berita">
   <h2>Berita & Pengumuman</h2>
   <article class="card">
     <h3>Pengumuman Jemaat</h3>
-    <p>
-      <strong>Tanggal:</strong> ____________________</p>
+    <p><strong>Tanggal:</strong> ____________________</p>
     <p>
       Diberitahukan kepada seluruh warga jemaat GKJW Pesanggaran bahwa
       informasi kegiatan, pelayanan, dan pengumuman penting akan disampaikan
@@ -245,28 +188,23 @@
       yang telah dijadwalkan.
     </p>
   </article>
-</section>
-<section id="galeri">
+</section><section id="galeri">
   <h2>Galeri Kegiatan</h2>
   <p>Dokumentasi kegiatan jemaat GKJW Pesanggaran.</p>
+  <section id="galeri">
+  <h2>Galeri Kegiatan</h2>
   <div class="galeri-grid">
-    <img src="https://via.placeholder.com/300x200" alt="Kegiatan Jemaat 1">
-    <img src="https://via.placeholder.com/300x200" alt="Kegiatan Jemaat 2">
-    <img src="https://via.placeholder.com/300x200" alt="Kegiatan Jemaat 3">
-    <img src="https://via.placeholder.com/300x200" alt="Kegiatan Jemaat 4">
+    <img src="img/foto1.jpg" alt="Kegiatan Jemaat 1">
+    <img src="img/foto2.jpg" alt="Kegiatan Jemaat 2">
+    <img src="img/foto3.jpg" alt="Kegiatan Jemaat 3">
   </div>
 </section>
-<!-- YOUTUBE -->
-<section id="youtube">
+</section><!-- YOUTUBE --><section id="youtube">
   <h2>Ibadah Online</h2>
   <p>Ibadah GKJW Pesanggaran dapat diikuti secara online melalui YouTube.</p>
   <div class="youtube-wrapper">
-    <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Ibadah GKJW Pesanggaran" frameborder="0" allowfullscreen>
-    </iframe>
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Ibadah GKJW Pesanggaran" frameborder="0" allowfullscreen></iframe>
   </div>
 </section>
-<footer>
-  <p>© 2025 GKJW Pesanggaran | Berani Menjadi Manusia</p>
-</footer>
 </body>
 </html>
